@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <title>Create New Pokemon</title>
+</head>
+
+<body>
+    <%-include('partials/nav.ejs') %>
+        <form class="new-form" method="POST" action="/pokedex">
+            <p></p>
+            <h1 class="add-pokemon-title">Add Pokemon</h1>
+            <p></p>
+            <div class="input-boxes post-name">
+                <label class="labels-new" for="name">Name: </label>
+                <input class="inputs" autocomplete="off" id="name" type="text" name="name">
+            </div>
+            <p></p>
+            <div class="input-boxes post-type3">
+                <label class="labels-new" for="type3">Type 3: </label>
+                <input class="inputs" autocomplete="off" id="type3" type="text" name="type">
+            </div>
+            <div class="input-boxes post-img">
+                <label class="labels-new" for="img">Image: </label>
+                <input class="inputs" autocomplete="off" id="img" type="text" name="img">
+            </div>
+            <p></p>
+            <div class="input-boxes post-hp">
+                <label class="labels-new" for="hp">HP: </label>
+                <input class="inputs" autocomplete="off" id="hp" type="number" name="stats">
+            </div>
+            <div class="input-boxes post-type1">
+                <label class="labels-new" for="type1">Type 1: </label>
+                <input class="inputs" autocomplete="off" id="type1" type="text" name="type">
+            </div>
+            <p></p>
+            <div class="input-boxes post-attack">
+                <label class="labels-new" for="attack">Attack: </label>
+                <input class="inputs" autocomplete="off" id="attack" type="number" name="stats">
+            </div>
+            <div class="input-boxes post-type2">
+                <label class="labels-new" for="type2">Type 2: </label>
+                <input class="inputs" autocomplete="off" id="type2" type="text" name="type">
+            </div>
+            <p></p>
+            <div class="input-boxes post-defense">
+                <label class="labels-new" for="defense">Defense: </label>
+                <input class="inputs" autocomplete="off" id="defense" type="number" name="stats">
+            </div>
+            <p></p>
+            <div class="input-boxes post-submit">
+                <input class="add-pokemon-button" type="submit" value="Create New Pokemon">
+            </div>
+            <p></p>
+        </form>
+</body>
+
+</html>

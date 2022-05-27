@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <title>Show Page</title>
+</head>
+
+<body>
+    <%-include('partials/nav.ejs') %>
+        <div class="show-container">
+            <div class="img-name-container">
+                <h1 class="pokemon-name">
+                    <%= onePokemon.name %>
+                </h1>
+                <img class="pokemon-show-image" src="<%= onePokemon.img %> " alt="<%= onePokemon.name %> image">
+            </div>
+            <div class="poke-types-container">
+                <h3 class="types-title">Poke Types</h3>
+                <ul class="types">
+                    <li>
+                        <%= onePokemon.type[0] %>
+                    </li>
+                    <li>
+                        <%= onePokemon.type[1] %>
+                    </li>
+                    <li>
+                        <%= onePokemon.type[2] %>
+                    </li>
+                </ul>
+            </div>
+            <div class="poke-stats">
+                <h2 class="stats-title">Poke Stats</h2>
+                <% const pokeStats=onePokemon.stats %>
+                    <p>HP: <span>
+                            <%= pokeStats.hp %>
+                        </span></p>
+                    <p>ATTACK: <span>
+                            <%= pokeStats.attack %>
+                        </span></p>
+                    <p>DEFENSE: <span>
+                            <%= pokeStats.defense %>
+                        </span></p>
+            </div>
+        </div>
+</body>
+
+</html>
