@@ -287,7 +287,6 @@ html {
         grid-template-rows: auto;
     }
 }
-
 @media screen and (max-width: 840px) {
     .links {
         display: flex;
