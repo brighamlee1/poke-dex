@@ -2,7 +2,9 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 3006;
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3006;
 
 const pokemon = require('./pokedex/models/pokemon')
 
